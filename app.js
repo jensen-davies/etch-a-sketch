@@ -39,12 +39,25 @@ resetBtn.addEventListener('click', () => {
   squares.forEach(item => item.classList.remove('colored'));
 });
 
-resizeBtn.addEventListener('click', () => {
-  let m = prompt('Input board size');
+
+const slider = document.getElementById("myRange");
+let output = document.getElementById("value");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  m = this.value;
   removeAllChildren(board);
-  setupSquares(m);
-});
+  setupSquares(m)
+}
 
-
+// resizeBtn.addEventListener('click', () => {
+//   let m = prompt('Input board size', '16');
+//   if (m === null) {
+//     return;
+//   }
+//   removeAllChildren(board);
+//   setupSquares(m);
+// });
 
 setupSquares(16);

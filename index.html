@@ -10,12 +10,14 @@
 </head>
   <body>
     <h1>Etcha-a-sketchy</h1>
-    <div>
-    </div>
       <div id = 'board'></div>
       <div id = "button-container">
         <button class = 'reset'>↺</button>
-        <button class = 'size'>Size</button>
+        <!-- <button class = 'size'>Size</button> -->
+        <div class="sliderContainer">
+          <input type = "range" min="1" max="64" value=16 id="myRange" class="slider">
+          <p><span id="value"></span></p> 
+        </div>
       </div>
   </body>
 </html>
