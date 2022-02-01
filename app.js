@@ -46,7 +46,7 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-  m = this.value;
+  let m = this.value;
   removeAllChildren(board);
   setupSquares(m)
 }
